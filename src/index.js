@@ -9,18 +9,11 @@ function importAll(r) {
   });
   return images;
 }
-const images = importAll(
-  require.context("./img", false, /\.(png|jpe?g|svg)$/)
-);
+const images = importAll(require.context("./img", false, /\.(png|jpe?g|svg)$/));
 
 
+const divImg = document.querySelector(".divImg");
 
-const divImg = document.querySelector('.divImg');
-
-const camba = new Image()
-camba.src = images['camba.png'];
+const camba = new Image();
+camba.src = images["camba.png"];
 divImg.appendChild(camba);
-
-console.log("It work");
-
-document.querySelector('.saludo').innerHTML = "Hey there Axia! This is a test. Because I'm learning Webpack but it'll work soon, I promise.";
