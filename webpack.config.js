@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/index.[contenthash].js",
-    assetModuleFilename: "img/[name][ext][query]", // Imagenes en folder.
+    assetModuleFilename: "img/[name][ext][query]", // Images in folder.
   },
   plugins: [
     new HtmlWebpackPlugin({
