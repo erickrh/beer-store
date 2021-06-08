@@ -1,0 +1,30 @@
+env:
+  browser: true
+  es6: true
+  jquery: true
+extends: 'eslint:recommended'
+parserOptions:
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 4
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+globals:
+  $R: true
+  django: true
+  LazyLoad: true
+  ReconnectingWebSocket: true
+  Swiper: true
+  objectFitPolyfill: true
+  moment: true
+  Handlebars: true
+  Mercadopago: true
