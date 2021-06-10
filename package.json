@@ -8,7 +8,8 @@
     "servor": "npx servor dist index.html 3000",
     "build": "rimraf dist && webpack --mode production",
     "buildev": "webpack --mode development",
-    "serve": "webpack serve"
+    "serve": "webpack serve --mode=development",
+    "tailwind": "postcss src/tailwind.css -o src/style.css"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,16 @@
   },
   "homepage": "https://github.com/erickrh/beerstore#readme",
   "devDependencies": {
+    "autoprefixer": "10.2.6",
     "css-loader": "5.2.6",
     "editorconfig": "0.15.3",
     "eslint": "7.28.0",
     "html-webpack-plugin": "5.3.1",
     "image-webpack-loader": "7.0.1",
+    "postcss-cli": "8.3.1",
     "servor": "4.0.2",
     "style-loader": "2.0.0",
+    "tailwindcss": "2.1.4",
     "webpack": "5.38.1",
     "webpack-cli": "4.7.0",
     "webpack-dev-server": "3.11.2"
