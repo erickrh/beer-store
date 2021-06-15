@@ -10,7 +10,8 @@
     "buildev": "webpack --mode development",
     "serve": "webpack serve --mode=development",
     "tailwind": "postcss src/tailwind.css -o src/style.css",
-    "build": "rimraf dist && rimraf src/style.css && postcss src/tailwind.css -o src/style.css && webpack --mode production"
+    "oldbuild": "rimraf dist && rimraf src/style.css && postcss src/tailwind.css -o src/style.css && webpack --mode production",
+    "build": "rimraf dist && npm run tailwind && npm run buildprod"
   },
   "repository": {
     "type": "git",
