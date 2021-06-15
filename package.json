@@ -10,8 +10,7 @@
     "buildev": "webpack --mode development",
     "serve": "webpack serve --mode=development",
     "tailwind": "postcss src/tailwind.css -o src/style.css",
-    "oldbuild": "rimraf dist && rimraf src/style.css && postcss src/tailwind.css -o src/style.css && webpack --mode production",
-    "build": "rimraf dist && npm run tailwind && npm run buildprod"
+    "build": "rimraf dist && rimraf src/style.css && postcss src/tailwind.css -o src/style.css && webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,6 @@
   },
   "homepage": "https://github.com/erickrh/beerstore#readme",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "3.1.3",
     "autoprefixer": "10.2.6",
     "css-loader": "5.2.6",
     "cssnano": "5.0.6",
