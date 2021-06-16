@@ -27,13 +27,6 @@ module.exports = {
                 },
             },
             {
-                test: /\.(svg)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'svg/[name][ext][query]',
-                },
-            },
-            {
                 test: /\.(handlebars|hbs)$/,
                 loader: 'handlebars-loader',
             },
