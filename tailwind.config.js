@@ -1,11 +1,16 @@
 module.exports = {
     purge: {
-        enabled: true,
+        enabled: false,
         content: ['./src/**/*.html', './src/**/*.handlebars'],
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                myColor: '#0000A3',
+                myBg: '#0F0F0F'
+            }
+        },
     },
     variants: {
         extend: {},
