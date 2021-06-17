@@ -7,9 +7,21 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                myColor: '#0000A3',
-                myBg: '#0F0F0F'
-            }
+                customBlue: '#0000A3',
+                customBlack: '#0F0F0F'
+            },
+            height: {
+                headerHeight: '70px',
+                axiaHeight: '30px',
+                cardHeight: '72px',
+                arrowHeight: '38px',
+                igHeight: '34px'
+            },
+            width: {
+                axiaWidth: '43px',
+                arrowWidth: '38px',
+                igWidth: '34px'
+            },
         },
     },
     variants: {
