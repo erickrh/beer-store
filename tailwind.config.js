@@ -15,12 +15,14 @@ module.exports = {
                 axiaHeight: '30px',
                 cardHeight: '72px',
                 arrowHeight: '38px',
-                igHeight: '34px'
+                igHeight: '34px',
+                beerCardHeight: '297px'
             },
             width: {
                 axiaWidth: '43px',
                 arrowWidth: '38px',
-                igWidth: '34px'
+                igWidth: '34px',
+                beerCardHeightWidth: '165px'
             },
         },
     },
