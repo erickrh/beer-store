@@ -9,11 +9,12 @@ function importAll(r) {
     });
     return images;
 }
-const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('./img', false, /\.(png|jpe?g)$/));
 
 
+/*
 const divImg = document.querySelector('.divImg');
-
 const camba = new Image();
 camba.src = images['camba.png'];
 divImg.appendChild(camba);
+*/
