@@ -20,22 +20,17 @@ module.exports = {
                 card: '72px',
                 arrow: '38px',
                 instagram: '34px',
-                beerCard: '278px',
-                beerImg: '140px',
                 btnAdd: '35px'
             },
             width: {
                 brand: '43px',
                 arrow: '38px',
                 instagram: '34px',
-                beerCard: '165px',
-                beerImg: '137px'
             },
-            padding: {
-                container: '15px'
+            spacing: {
+                gutter: '15px'
             },
-            margin:{
-                container: '15px',
+            margin: {
                 distancePrice: '12px'
             },
             fontSize: {

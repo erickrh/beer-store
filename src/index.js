@@ -25,10 +25,8 @@ const ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', './beers.json');
 ourRequest.onload = () => {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
-    let data = JSON.parse(ourRequest.responseText);
-    createHTML(data);
-    } else {
-    console.log('We connected, but it returned an error.');
+        let data = JSON.parse(ourRequest.responseText);
+        createHTML(data);
     }
 };
 
