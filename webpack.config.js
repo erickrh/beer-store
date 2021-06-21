@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const GenerateJsonPlugin = require('generate-json-webpack-plugin');
+const beers = require('./src/beers.json');
 
 module.exports = {
     entry: './src/index.js',
@@ -12,6 +14,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
+        new GenerateJsonPlugin('beers.json', beers),
     ],
     module: {
         rules: [

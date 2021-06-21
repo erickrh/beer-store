@@ -1,0 +1,15 @@
+{{#each products}}
+    <article>
+        <div class="border border-primary-gray p-3.5">
+            <figure>
+                <img class="mx-auto mb-3" src="{{img}}" alt="{{name}}">
+            </figure>
+            <p class="font-black text-sm line-clamp-1 hover:line-clamp-none">{{name}}</p>
+            <p class="text-tiny mt-1.5 text-gray-600 line-clamp-2 hover:line-clamp-none md:line-clamp-1">{{description}}</p>
+            <p class="my-3 font-bold text-price tracking-wider">${{price}}</p>
+        </div>
+        <div>
+            <button class="block mx-auto w-full uppercase font-bold text-primary-blue bg-primary-lightgray text-sizeLetter border border-primary-gray px-3.5 h-btnAdd">Agregar</button>
+        </div>
+    </article>
+{{/each}}

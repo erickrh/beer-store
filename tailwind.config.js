@@ -9,7 +9,9 @@ module.exports = {
             colors: {
                 primary: {
                     blue: '#0000A3',
-                    black: '#0F0F0F'
+                    black: '#0F0F0F',
+                    gray: '#E5E5E5',
+                    lightgray: '#F4F4F4'
                 }
             },
             height: {
@@ -18,18 +20,31 @@ module.exports = {
                 card: '72px',
                 arrow: '38px',
                 instagram: '34px',
-                beerCard: '297px'
+                btnAdd: '35px'
             },
             width: {
                 brand: '43px',
                 arrow: '38px',
                 instagram: '34px',
-                beerCard: '165px'
             },
+            spacing: {
+                gutter: '15px'
+            },
+            margin: {
+                distancePrice: '12px'
+            },
+            fontSize: {
+                tiny: '11px',
+                sizeLetter: '14.16px'
+            }
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            lineClamp: ['responsive', 'hover'],
+        },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/line-clamp'),
+    ],
 }
