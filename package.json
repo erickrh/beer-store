@@ -6,8 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "servor": "npx servor dist index.html 3000",
-    "buildprod": "rimraf dist && webpack --mode production",
-    "buildev": "webpack --mode development",
     "serve": "webpack serve --mode=development",
     "tailwind": "postcss src/tailwind.css -o src/style.css",
     "build": "rimraf dist && rimraf src/style.css && postcss src/tailwind.css -o src/style.css && webpack --mode production"
@@ -42,7 +40,6 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "0.2.1",
     "generate-json-webpack-plugin": "2.0.0",
     "handlebars": "4.7.7",
     "handlebars-loader": "1.7.1",

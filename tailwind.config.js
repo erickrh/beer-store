@@ -5,6 +5,9 @@ module.exports = {
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
+        fontFamily: {
+            'poppins': ['Poppins']
+        },
         extend: {
             colors: {
                 primary: {
@@ -25,26 +28,27 @@ module.exports = {
             width: {
                 brand: '43px',
                 arrow: '38px',
-                instagram: '34px',
+                instagram: '34px'
             },
             spacing: {
-                gutter: '15px'
+                gutter: '15px',
+                brand: '15.5px'
             },
             margin: {
-                distancePrice: '12px'
+                distance: '18px'
             },
             fontSize: {
                 tiny: '11px',
-                sizeLetter: '14.16px'
-            }
+                sizeLetter: '14.16px',
+                smallLetter: '0.738rem',
+                wine: '1.53rem'
+            },
         },
     },
     variants: {
-        extend: {
-            lineClamp: ['responsive', 'hover'],
-        },
+
     },
     plugins: [
-        require('@tailwindcss/line-clamp'),
+
     ],
 }
