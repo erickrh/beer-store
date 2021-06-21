@@ -34,8 +34,8 @@ module.exports = {
                 distancePrice: '12px'
             },
             fontSize: {
-                tiny: "11px",
-                sizeLetter: "14.16px"
+                tiny: '11px',
+                sizeLetter: '14.16px'
             }
         },
     },
