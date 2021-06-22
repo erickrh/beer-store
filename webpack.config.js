@@ -38,6 +38,13 @@ module.exports = {
                 loader: 'handlebars-loader',
             },
             {
+                test: /\.(woff2)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext][query]',
+                },
+            },
+            {
                 // Minify Images
                 loader: 'image-webpack-loader',
                 options: {
