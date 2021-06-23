@@ -28,3 +28,7 @@
             url('./fonts/poppins-v15-latin-700.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
     }
 }
+
+.featherlight .featherlight-content {
+    @apply p-0 border-0 absolute bottom-0 left-0 right-0;
+}
