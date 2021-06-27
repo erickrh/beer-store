@@ -33,7 +33,7 @@ ourRequest.send();
 const createHTML = (beerListData) => {
     const beerContainer = document.getElementById('beerContainer');
     beerContainer.innerHTML = myTemplate(beerListData);
-}
+};
 
 // Modal
 const modalTemplate = require('./partials/modal.handlebars');
@@ -42,9 +42,3 @@ document.addEventListener('DOMContentLoaded', () => {
     div.innerHTML = modalTemplate();
     document.body.appendChild(div);
 });
-
-// Despedida
-const despedida = () => {
-    console.log(`%cGracias por la oportunidad de haber hecho parte de su equipo. By: Erick.`, 'color: white; background-color: red; padding: 10px;');
-}
-despedida();
