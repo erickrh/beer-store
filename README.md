@@ -1,5 +1,4 @@
 # Welcome to Beer Store 🍺
-This is the project that the inter Erick Riaño is working during his internship.
 
 #### **Prerequisites:**
 - You need to have installed Node and NPM.
