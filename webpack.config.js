@@ -17,7 +17,7 @@ module.exports = {
         }),
         new GenerateJsonPlugin('beers.json', beers),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: '[name].css',
             chunkFilename: '[id].css',
         }),
     ],
