@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const GenerateJsonPlugin = require('generate-json-webpack-plugin');
 const beers = require('./src/beers.json');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -15,6 +16,10 @@ module.exports = {
             template: 'src/index.html',
         }),
         new GenerateJsonPlugin('beers.json', beers),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css',
+            chunkFilename: '[id].css',
+        }),
     ],
     module: {
         rules: [
@@ -24,7 +29,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
