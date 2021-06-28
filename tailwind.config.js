@@ -55,6 +55,9 @@ module.exports = {
                 wine: '1.53rem',
                 filter: '20.4px'
             },
+            inset: {
+                '-50': '-50rem',
+            },
         },
     },
     variants: {

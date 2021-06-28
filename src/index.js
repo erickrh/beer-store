@@ -42,3 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     div.innerHTML = modalTemplate();
     document.body.appendChild(div);
 });
+
+//const myModal = document.querySelector('.myModal');
+//myModal.addEventListener('click', () => {
+//    const featherWindow = document.querySelector('.featherlight-content');
+//    featherWindow.classList.add('bottom-0', 'transition', 'duration-600', 'ease-in-out');
+//});
+
+$('.myModal').click(function() {
+    $('.featherlight-content').animate({ 'bottom': '+=800px' }, 'slow' );
+});
+
+//$('.myModal').click(function() {$('.featherlight-content').animate({ 'bottom': '-=800px' }, 'slow' );});
+
+//$('myModal').click(function() {
+//    $('.featherlight-content').animate({ 'bottom': '-=800px' }, 'slow' );
+//});
