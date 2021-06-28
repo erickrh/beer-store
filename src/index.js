@@ -43,18 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(div);
 });
 
-//const myModal = document.querySelector('.myModal');
-//myModal.addEventListener('click', () => {
-//    const featherWindow = document.querySelector('.featherlight-content');
-//    featherWindow.classList.add('bottom-0', 'transition', 'duration-600', 'ease-in-out');
-//});
+const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500' );
+const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500' );
 
-$('.myModal').click(function() {
-    $('.featherlight-content').animate({ 'bottom': '+=800px' }, 'slow' );
+$.extend($.featherlight.defaults, {
+    beforeOpen: () => openWindow(),
+    openSpeed: 500,
+    beforeClose: () => closeWindow(),
+    closeSpeed: 500,
+    afterClose: $.featherlight.close()
 });
-
-//$('.myModal').click(function() {$('.featherlight-content').animate({ 'bottom': '-=800px' }, 'slow' );});
-
-//$('myModal').click(function() {
-//    $('.featherlight-content').animate({ 'bottom': '-=800px' }, 'slow' );
-//});
