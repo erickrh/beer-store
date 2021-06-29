@@ -41,10 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.innerHTML = modalTemplate();
     document.body.appendChild(div);
+    const rubia = document.querySelector('#rubia');
+    rubia.addEventListener('click', () => console.log('rubia clicked'));
 });
 
-const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500' );
-const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500' );
+const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500');
+const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500');
 
 $.extend($.featherlight.defaults, {
     beforeOpen: () => openWindow(),

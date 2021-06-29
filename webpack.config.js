@@ -3,6 +3,7 @@ const path = require('path');
 const GenerateJsonPlugin = require('generate-json-webpack-plugin');
 const beers = require('./src/beers.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const HandlebarsPlugin = require('handlebars-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
