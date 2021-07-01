@@ -41,8 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.innerHTML = modalTemplate();
     document.body.appendChild(div);
-    const rubia = document.querySelector('#rubia');
-    rubia.addEventListener('click', () => console.log('rubia clicked'));
+
+    // Filter
+
+    const filtrarBtn = document.getElementById('filtrarBtn');
+    const rubia = document.querySelector('input[name="rubia"]');
+    rubia.addEventListener('click', () => console.log('Rubia clicked'));
+
+    filtrarBtn.addEventListener('click', () => {
+        if (rubia.checked) {
+            console.log('Rubia is checked');
+        }
+    });
 });
 
 const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500');
@@ -53,5 +63,6 @@ $.extend($.featherlight.defaults, {
     openSpeed: 500,
     beforeClose: () => closeWindow(),
     closeSpeed: 500,
-    afterClose: $.featherlight.close()
+    afterClose: $.featherlight.close(),
+    persist: true
 });
