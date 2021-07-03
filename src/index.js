@@ -67,12 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let products = {};
                 products.products = beerFilter;
                 beerContainer.innerHTML = myTemplate(products);
-                console.log(products);
             };
         };
 
         if (rubia.checked) {
-            console.log('Rubia is checked');
             filterFunction();
         }
     });
