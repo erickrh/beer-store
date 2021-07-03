@@ -47,6 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtrarBtn = document.getElementById('filtrarBtn');
     const rubia = document.querySelector('input[name="rubia"]');
 
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const grabCheckboxValues = () => {
+        let checkboxValues = [];
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) checkboxValues.push(checkbox.value);
+        });
+        return checkboxValues;
+    };
+    checkboxes.forEach((box) => {
+        box.checked = false;
+        box.addEventListener('change', () => console.log(grabCheckboxValues()));
+    });
+
+
     filtrarBtn.addEventListener('click', () => {
 
         const filterFunction = () => {
@@ -63,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ourRequest.send();
             const createHTML = (beerListData) => {
                 const beerContainer = document.getElementById('beerContainer');
-                let beerFilter = beerListData.products.filter(products => products.filterId == 1);
+                let beerFilter = beerListData.products.filter(products => products.filterId == '1');
                 let products = {};
                 products.products = beerFilter;
                 beerContainer.innerHTML = myTemplate(products);
