@@ -45,7 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter
 
     const filtrarBtn = document.getElementById('filtrarBtn');
-    const rubia = document.querySelector('input[name="rubia"]');
+
+    const filterFunction = (filtersValues) => {
+        const myTemplate = require('./partials/beerCards.handlebars');
+        const ourRequest = new XMLHttpRequest();
+        ourRequest.open('GET', './beers.json');
+        ourRequest.onload = () => {
+            if (ourRequest.status >= 200 && ourRequest.status < 400) {
+                let data = JSON.parse(ourRequest.responseText);
+                createHTML(data);
+            }
+        };
+        ourRequest.onerror = () => console.log('Connection error');
+        ourRequest.send();
+        const createHTML = (beerListData) => {
+            const beerContainer = document.getElementById('beerContainer');
+            let beerFilter = beerListData.products.filter(products => products.filterId == filtersValues);
+            let products = {};
+            products.products = beerFilter;
+            beerContainer.innerHTML = myTemplate(products);
+            console.log(products);
+        };
+    };
 
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const grabCheckboxValues = () => {
@@ -58,35 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkboxes.forEach((box) => {
         box.checked = false;
         box.addEventListener('change', () => console.log(grabCheckboxValues()));
-    });
-
-
-    filtrarBtn.addEventListener('click', () => {
-
-        const filterFunction = () => {
-            const myTemplate = require('./partials/beerCards.handlebars');
-            const ourRequest = new XMLHttpRequest();
-            ourRequest.open('GET', './beers.json');
-            ourRequest.onload = () => {
-                if (ourRequest.status >= 200 && ourRequest.status < 400) {
-                    let data = JSON.parse(ourRequest.responseText);
-                    createHTML(data);
-                }
-            };
-            ourRequest.onerror = () => console.log('Connection error');
-            ourRequest.send();
-            const createHTML = (beerListData) => {
-                const beerContainer = document.getElementById('beerContainer');
-                let beerFilter = beerListData.products.filter(products => products.filterId == '1');
-                let products = {};
-                products.products = beerFilter;
-                beerContainer.innerHTML = myTemplate(products);
-            };
-        };
-
-        if (rubia.checked) {
-            filterFunction();
-        }
+        box.addEventListener('change', () => filterFunction(grabCheckboxValues()));
     });
 });
 
