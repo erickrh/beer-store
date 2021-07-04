@@ -60,11 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
         ourRequest.send();
         const createHTML = (beerListData) => {
             const beerContainer = document.getElementById('beerContainer');
-            let beerFilter = beerListData.products.filter(products => products.filterId == filtersValues);
+            let mainBeerFilter = [];
+            for (let i = 0; i < beerListData.products.length; i++) {
+                let beerFilter = beerListData.products.filter(products => products.filterId == filtersValues[i]);
+                if (beerFilter[1]) {
+                    mainBeerFilter.push(beerFilter);
+                }
+            }
+            let bridge = [];
+            for (let i = 0; i < mainBeerFilter.length; i++) {
+                for (let z = 0; z < mainBeerFilter[i].length; z++) {
+                    bridge.push(mainBeerFilter[i][z]);
+                }
+            }
             let products = {};
-            products.products = beerFilter;
+            products.products = bridge;
             beerContainer.innerHTML = myTemplate(products);
-            console.log(products);
         };
     };
 
@@ -78,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     checkboxes.forEach((box) => {
         box.checked = false;
-        box.addEventListener('change', () => console.log(grabCheckboxValues()));
         box.addEventListener('change', () => filterFunction(grabCheckboxValues()));
     });
 });
