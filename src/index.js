@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.featherlight-close').click();
     });
 
+    $('#btnClean').click(function(){
+        $('input:checkbox').attr('checked', false);
+        filterFunction(['1', '2', '3']);
+    });
+
     const filterFunction = (filtersValues) => {
         const myTemplate = require('./partials/beerCards.handlebars');
         const ourRequest = new XMLHttpRequest();
