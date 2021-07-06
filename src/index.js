@@ -49,7 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('#btnClean').click(function(){
         $('input:checkbox').attr('checked', false);
-        filterFunction(['1', '2', '3']);
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const grabCheckboxValues = () => {
+            let checkboxValues = [];
+            checkboxes.forEach((checkbox) => {
+                if (checkbox) checkboxValues.push(checkbox.value);
+            });
+            return checkboxValues;
+        };
+        filterFunction(grabCheckboxValues());
     });
 
     const filterFunction = (filtersValues) => {
