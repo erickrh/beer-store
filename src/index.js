@@ -75,7 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             let products = {};
             products.products = bridge;
-            beerContainer.innerHTML = myTemplate(products);
+
+            if (products.products == false) {
+                alert('Please select an option.');
+            } else {
+                beerContainer.innerHTML = myTemplate(products);
+            }
         };
     };
 
@@ -93,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Filter effects
 const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500');
 const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500');
 
