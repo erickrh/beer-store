@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(div);
 
     // Filter
-
-    const filtrarBtn = document.getElementById('filtrarBtn');
+    $('#filtrarBtn').on('click', function(){
+        $('.featherlight-close').click();
+    });
 
     const filterFunction = (filtersValues) => {
         const myTemplate = require('./partials/beerCards.handlebars');
