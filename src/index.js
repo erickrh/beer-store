@@ -12,10 +12,14 @@ function importAll(r) {
 const images = importAll(require.context('./img', false, /\.(png|jpe?g)$/));
 
 /*
+
+** How to import only one image (This is not in use yet) **
+
 const divImg = document.querySelector('.divImg');
 const camba = new Image();
 camba.src = images['camba.png'];
 divImg.appendChild(camba);
+
 */
 
 // List beers
@@ -43,22 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(div);
 
     // Filter
-    $('#filtrarBtn').on('click', function(){
-        $('.featherlight-close').click();
-    });
-
-    $('#btnClean').click(function(){
-        $('input:checkbox').attr('checked', false);
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        const grabCheckboxValues = () => {
-            let checkboxValues = [];
-            checkboxes.forEach((checkbox) => {
-                if (checkbox) checkboxValues.push(checkbox.value);
-            });
-            return checkboxValues;
-        };
-        filterFunction(grabCheckboxValues());
-    });
 
     const filterFunction = (filtersValues) => {
         const myTemplate = require('./partials/beerCards.handlebars');
@@ -91,12 +79,35 @@ document.addEventListener('DOMContentLoaded', () => {
             products.products = bridge;
 
             if (products.products == false) {
-                alert('Please select an option.');
+                cleaning();
             } else {
                 beerContainer.innerHTML = myTemplate(products);
             }
         };
     };
+
+    // Operations Buttons
+
+    $('#filtrarBtn').on('click', function () {
+        $('.featherlight-close').click();
+    });
+
+    const cleaning = () => {
+        $('input:checkbox').attr('checked', false);
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const grabCheckboxValues = () => {
+            let checkboxValues = [];
+            checkboxes.forEach((checkbox) => {
+                if (checkbox) checkboxValues.push(checkbox.value);
+            });
+            return checkboxValues;
+        };
+        filterFunction(grabCheckboxValues());
+    };
+    $('#btnClean').click(cleaning());
+
+
+    // Operation Checkboxes
 
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const grabCheckboxValues = () => {

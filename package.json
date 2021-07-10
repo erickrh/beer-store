@@ -43,6 +43,7 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
+    "@tailwindcss/forms": "0.3.3",
     "generate-json-webpack-plugin": "2.0.0",
     "handlebars": "4.7.7",
     "handlebars-loader": "1.7.1",
