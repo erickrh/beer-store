@@ -1,7 +1,7 @@
-// import CSS
+// Import CSS
 import './style.css';
 
-// import images
+// Import Images
 function importAll(r) {
     let images = {};
     r.keys().map((item, index) => {
@@ -22,7 +22,7 @@ divImg.appendChild(camba);
 
 */
 
-// List beers
+// List Beers
 const myTemplate = require('./partials/beerCards.handlebars');
 const ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', './beers.json');
@@ -123,10 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Filter effects
+// Filter Effects
 const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500');
 const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500');
 
+
+// Featherlight Configuration
 $.extend($.featherlight.defaults, {
     beforeOpen: () => openWindow(),
     openSpeed: 500,
