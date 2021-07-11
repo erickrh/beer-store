@@ -32,3 +32,7 @@
 .featherlight .featherlight-content {
     @apply p-0 border-0 absolute -bottom-50 left-0 right-0;
 }
+
+.customCheckbox {
+    @apply h-6 w-6 text-primary-blue focus:ring-transparent rounded;
+}
