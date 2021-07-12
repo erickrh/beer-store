@@ -135,5 +135,6 @@ $.extend($.featherlight.defaults, {
     beforeClose: () => closeWindow(),
     closeSpeed: 500,
     afterClose: $.featherlight.close(),
-    persist: true
+    persist: true,
+    closeIcon: null,
 });
