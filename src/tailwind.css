@@ -36,3 +36,7 @@
 .customCheckbox {
     @apply h-6 w-6 text-primary-blue focus:ring-transparent rounded;
 }
+
+.divideLine {
+    @apply m-auto divide-y w-full divide-gray-400 divide-opacity-50
+}
