@@ -11,6 +11,7 @@ function importAll(r) {
 }
 const images = importAll(require.context('./img', false, /\.(png|jpe?g)$/));
 
+
 /*
 
 ** How to import only one image (This is not in use yet) **
@@ -22,7 +23,9 @@ divImg.appendChild(camba);
 
 */
 
+
 // List Beers
+
 const myTemplate = require('./partials/beerCards.handlebars');
 const ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', './beers.json');
@@ -39,12 +42,33 @@ const createHTML = (beerListData) => {
     beerContainer.innerHTML = myTemplate(beerListData);
 };
 
+
+// Shop Car Number
+
+let counter = 0;
+const addNumber = () => {
+    counter += 1;
+    console.log(counter);
+};
+
+const addNumberFunction = () => {
+    const addBtn = document.querySelectorAll('#addBtn');
+    for (let i = 0; i < addBtn.length; i++) {
+        addBtn[i].addEventListener('click', addNumber);
+    }
+};
+
+window.onload = () => { addNumberFunction(); };
+
+
 // Modal
+
 const modalTemplate = require('./partials/modal.handlebars');
 document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.innerHTML = modalTemplate();
     document.body.appendChild(div);
+
 
     // Filter
 
@@ -83,8 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 beerContainer.innerHTML = myTemplate(products);
             }
+            addNumberFunction();
         };
     };
+
 
     // Operations Buttons
 
@@ -123,12 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // Filter Effects
+
 const openWindow = () => $('.featherlight-content').animate({ 'bottom': '+=800px' }, '500');
 const closeWindow = () => $('.featherlight-content').animate({ 'bottom': '-=800px' }, '500');
 
 
 // Featherlight Configuration
+
 $.extend($.featherlight.defaults, {
     beforeOpen: () => openWindow(),
     openSpeed: 500,
