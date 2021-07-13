@@ -38,5 +38,5 @@
 }
 
 .divideLine {
-    @apply m-auto divide-y w-full divide-gray-400 divide-opacity-50
+    @apply m-auto divide-y w-full divide-gray-400 divide-opacity-50;
 }
