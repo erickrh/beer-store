@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 beerContainer.innerHTML = myTemplate(products);
             }
-            addNumberFunction();
+            addNumberFunction(); // Helps counter work after filter.
         };
     };
 
