@@ -45,10 +45,11 @@ const createHTML = (beerListData) => {
 
 // Shop Car Number
 
+const counterNumber = document.querySelector('#counterNumber');
 let counter = 0;
 const addNumber = () => {
     counter += 1;
-    console.log(counter);
+    counterNumber.innerHTML = counter;
 };
 
 const addNumberFunction = () => {
@@ -57,7 +58,6 @@ const addNumberFunction = () => {
         addBtn[i].addEventListener('click', addNumber);
     }
 };
-
 window.onload = () => { addNumberFunction(); };
 
 
