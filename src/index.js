@@ -59,7 +59,10 @@ const addNumberFunction = () => {
     }
 };
 window.onload = () => { addNumberFunction(); };
-
+const reminder = () => setTimeout(() => {
+    addNumberFunction();
+}, 500);
+reminder();
 
 // Modal
 
