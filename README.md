@@ -11,8 +11,10 @@
 5) Enjoy.
 
 #### **Screenshots**
-[![](https://i.imgur.com/ncG1vay.png)](https://i.imgur.com/ncG1vay.png)
+[![](https://i.imgur.com/NssSeFk.png)](https://i.imgur.com/NssSeFk.png)
 
-[![](https://i.imgur.com/AgBRdCS.png)](https://i.imgur.com/AgBRdCS.png)
+[![](https://i.imgur.com/I0eSPQn.png)](https://i.imgur.com/I0eSPQn.png)
+
+[![](https://i.imgur.com/Afvbmf8.png)](https://i.imgur.com/Afvbmf8.png)
 
 Thanks for your visit! 💚
