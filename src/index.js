@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         filterFunction(grabCheckboxValues());
     };
-    $('#btnClean').click(function () { cleaning(); });
+    document.querySelector('#btnClean').addEventListener('click', cleaning);
 
 
     // Operation Checkboxes
