@@ -1,5 +1,13 @@
+// Import Jquery
+import $ from 'jquery';
+
+// Import Featherlight.js
+import './featherlight.min.css';
+import './featherlight.min.js';
+
 // Import CSS
 import './style.css';
+
 
 // Import Images
 function importAll(r) {

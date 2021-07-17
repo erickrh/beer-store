@@ -47,6 +47,7 @@
     "generate-json-webpack-plugin": "2.0.0",
     "handlebars": "4.7.7",
     "handlebars-loader": "1.7.1",
+    "jquery": "^3.6.0",
     "rimraf": "2.7.1"
   }
 }
